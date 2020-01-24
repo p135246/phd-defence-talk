@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.7]
+\tikzset{point/.style = {draw, circle, fill=black, minimum size=2pt,inner sep=0pt}}
+\def\dist{5.5}
+\def\startangle{90}
+\def\leglength{1.2}
+\def\dashpart{0.5}
+\coordinate[point] (B) at (0,0);
+\path (B) -- +(\startangle:\dashpart*\leglength) coordinate (B11) -- +(\startangle:\leglength) coordinate (B12);
+\path (B) -- +(\startangle+120:\dashpart*\leglength) coordinate (B21) -- +(\startangle+120:\leglength) coordinate (B22);
+\path (B) -- +(\startangle+240:\dashpart*\leglength) coordinate (B31) -- +(\startangle+240:\leglength) coordinate (B32);
+
+\draw (B) -- (B12) node[point,style={fill=white},label={0:$1$}] {};
+\draw (B) -- (B21); \draw[dashed] (B21) -- (B22);
+\draw (B) -- (B31); \draw[dashed] (B31) -- (B32);
+\end{tikzpicture}

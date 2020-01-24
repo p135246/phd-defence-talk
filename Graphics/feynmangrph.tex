@@ -1,0 +1,19 @@
+\begin{tikzpicture}[scale=1,
+every label/.append style={font=\scriptsize},
+point/.style = {draw, circle, fill=black, minimum size=2pt,inner sep=0pt},
+root/.style={circle,fill=red!40, inner sep=2pt},
+leaf/.style={circle,fill=green!40!black, inner sep=2pt}
+]
+\def\vertdist{.6}
+\def\hordist{.7}
+\node[point,label={[above]$x_1$}] (A) at (0,0) {};
+\node[point,label={[above]$x_2$}] (B) at (3,0) {};
+\node[point,label={[above]$x_3$}] (C) at (1.5,2) {};
+\node[point,style={fill=white},label={[above]$h_1$}] (AA) at ($(A)+(-.7,.7)$) {};
+\node[point,style={fill=white},label={[above]$h_2$}] (BB) at ($(B)+(.7,.7)$) {};
+\node[point,style={fill=white},label={[below,yshift=-3pt]$h_3$}] (CC) at ($(C)+(0,-.8)$) {};
+\draw (A) -- (B) node[midway, below] {$\Prpg$}-- (C)  node[midway, right] {$\Prpg$} -- (A)  node[midway, left] {$\Prpg$};
+\draw (A) -- (AA);
+\draw (B) -- (BB);
+\draw (C) -- (CC);
+\end{tikzpicture}
