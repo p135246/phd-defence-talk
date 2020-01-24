@@ -1,4 +1,4 @@
-# Ph.D.-defence talk
+# Thesis defence talk
 * My Ph.D.-defence talk on December 20, 2019.
 * See the repository `phd-thesis` for my Ph.D.-thesis.
 
